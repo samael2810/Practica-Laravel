@@ -89,7 +89,7 @@ class ProyectoController extends Controller
 
         $proyecto->update($request->all());
 
-        return redirect()->route('proyecto.index')
+        return redirect()->route('proyectos.index')
             ->with('success', 'Proyecto updated successfully');
     }
 
@@ -102,7 +102,7 @@ class ProyectoController extends Controller
     {
         $proyecto = Proyecto::find($id)->delete();
 
-        return redirect()->route('proyecto.index')
+        return redirect()->route('proyectos.index')
             ->with('success', 'Proyecto deleted successfully');
     }
 }
